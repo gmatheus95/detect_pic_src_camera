@@ -101,10 +101,12 @@ ENV/
 .mypy_cache/
 
 # Documents
-.pdf
-.txt
+*.pdf
+*.txt
 
 # Images
-.jpeg
-.JPEG
-.tiff
+*.jpg
+*.JPG
+*.jpeg
+*.JPEG
+*.tiff
