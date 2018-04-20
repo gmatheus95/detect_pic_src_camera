@@ -133,9 +133,14 @@ def main():
     lr_model.fit(features,devices)
 
     # Single test
-    test_images = io.imread('../input512/(iP6)1.tiff')
-    test_images = extract_features_from_image(test_images)
-    print(lr_model.predict([test_images]))
+    test_images = []
+    test_image = io.imread('../input512/(iP6)1.tiff')
+    test_images.append(extract_features_from_image(test_image))
+    test_image = io.imread('../input512/(MotoX)3.tiff')
+    test_images.append(extract_features_from_image(test_image))
+    test_image = io.imread('../input512/(Nex7)8.tiff')
+    test_images.append(extract_features_from_image(test_image))
+    print(lr_model.predict(test_images))
         
 if __name__ == '__main__':
     main()        
